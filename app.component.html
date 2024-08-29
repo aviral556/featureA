@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="chat-window">
+    <div class="chat-box">
+      <p *ngFor="let message of chatMessages">{{ message }}</p>
+    </div>
+  </div>
+  <div class="input-container">
+    <input #searchInput type="text" placeholder='{"prompt": "Find answer to the following query...", "text": "Your question", "language": "hi-IN", "datastore": "your-datastore"}' />
+    <button (click)="onSubmit(searchInput)">
+      <span class="send-icon">➡️</span>
+    </button>
+  </div>
+</div>
+
